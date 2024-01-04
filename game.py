@@ -1,5 +1,4 @@
 import random
-import sys
 
 WIDTH = 5
 HEIGHT = 5
@@ -28,14 +27,13 @@ def random_state(w, h):
 
 def render(state):
     for row in state:
-        sys.stdout.write('|')
+        print('|', end="")
         for char in row:
             if char == 0:
-                sys.stdout.write('#')
-            if char == 1:
-                sys.stdout.write(' ')
-        sys.stdout.write('|')
-        sys.stdout.write('\n')
+                print("#", end="")
+            else:
+                print(" ", end="")
+        print('|')
 
 
 if __name__ == "__main__":
